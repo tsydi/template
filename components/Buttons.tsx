@@ -1,15 +1,15 @@
 export const Button: React.FC = () => {
   return (
     <>
-      <div className="btn flex-center trs scale">Learn More</div>
+      <div className="btn flex-center relative transition opacity-66">Portfolio</div>
     </>
   )
 }
 
-export const ButtonClear: React.FC = () => {
+export const ButtonPost: React.FC = () => {
   return (
     <>
-      <div className="btn-clear flex-center trs scale">Learn More</div>
+      <div className="btn-post w-full h-48 flex-center relative transition opacity-66">Go to the Post</div>
     </>
   )
 }

@@ -1,33 +1,29 @@
-import '../styles/styles.scss';
+import '../styles/root.css';
+import '../styles/lib.css';
+import '../styles/styles.css';
 import type { AppProps } from 'next/app';
-import { AboveHeader } from '../components/AboveHeader';
-import { NavLinks, Author, FooterLinks, Logo } from '../components/Links';
-import { MobileNav } from '../components/MobileNav';
-import { motion } from 'framer-motion';
+import { Above } from '../components/Above';
+import { NavLinks, FooterLinks, Logo, Author } from '../components/Links';
+import { Overlay } from '../components/Overlay';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <motion.div className="page"
-
-      >
-        <AboveHeader />
+      <div className="page">
+        <Above />
         <header className="header flex-between z-10">
           <Logo />
-          <nav className="nav">
+          <nav>
             <NavLinks />
           </nav>
-          <MobileNav />
+          <Overlay />
         </header>
-
-        <hr className="header-hr" />
 
         <main className="main">
           <Component {...pageProps} />
         </main>
 
         <hr />
-
         <footer className="footer grid-col-2">
           <div className="grid-col-4">
             <FooterLinks />
@@ -36,7 +32,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             <Author />
           </div>
         </footer>
-      </motion.div>
+      </div>
     </>
   )
 }

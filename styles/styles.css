@@ -1,0 +1,167 @@
+/* Colors */
+.icons { color: black; }
+.active { color: black; }
+.mobile a { color: black; }
+.toggle span { background: #222; }
+.btn { color: white; }
+.btn-post { color: white; }
+
+/* Backgrounds */
+.above { background: white; }
+.above::before, .above::after { background: black; }
+.active::before { background: black; }
+.icons { background: white; }
+.toggle { background: white; }
+.btn { background: black; }
+.btn-post { background: black; }
+
+
+/* Font-size */
+.above h1 { font-size: 0.65em; }
+.btn { font-size: 0.875em; }
+.btn-post { font-size: 0.75em; }
+
+
+/* Animations */
+.page {
+  animation-name: opacity;
+  animation-duration: 2.25s;
+}
+.above::before, .above::after {
+  animation-name: width; animation-duration: 4.5s;
+}
+.btn, .btn-post {
+  animation-name: width; animation-duration: 1.5s;
+}
+
+
+/* Polygons */
+.above::after {
+  width: 50%;
+  clip-path: polygon(100% 0, 0 50%, 0 0);
+}
+.above::before {
+  width: 50%;
+  clip-path: polygon(100% 50%, 100% 100%, 0 100%);
+}
+
+
+/* Above */
+.above h1 {
+  letter-spacing: 0.65em;
+}
+.above {
+  min-height: 2.5em;
+}
+.above::before, .above::after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.above::before {
+  right: 0;
+}
+.above::after {
+  left: 0;
+}
+.icons {
+  margin: 0 0.25em;
+}
+
+/* Mobile */
+.mobile a {
+  margin: 20px 0;
+}
+.mobile div {
+  padding: 0 0.5em 0 2.5em;
+}
+.mobile {
+  width: 75%;
+}
+
+/* ActiveLink */
+.active::before {
+  width: 0.15em;
+  height: 1em;
+  border-radius: 25%;
+}
+.active::before {
+  content: '';
+  position: absolute;
+  top: 0.2em;
+  left: -40%;
+}
+
+/* Buttons */
+.btn {
+  width: 256px;
+  height: 2.75em;
+}
+.btn, .btn-post {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Card */
+.card {
+  margin-bottom: calc(1em * 1.75);
+}
+.card p, h3, h4, h5, h6 {
+  padding: 0 0.5em;
+}
+.card p {
+  width: calc(270px + 2.5vw);
+  margin: calc(1em * 1) 0;
+}
+
+/* Text */
+.text p {
+  margin-bottom: calc(1em * 1.625);
+}
+
+/* Footer */
+.footer a {
+  margin: 0.5em 0;
+}
+
+/* Phones Breakpoint */
+@media (max-width: 600px) {
+  /* Global */
+
+  /* Values */
+  .active::before {
+    height: 100%;
+    top: 0;
+    left: -10%;
+  }
+
+  .mobile .above {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1.125em;
+  }
+  .btn, .btn-post {
+    height: 45px;
+  }
+  .btn-post {
+    font-size: 0.95em;
+  }
+  .btn::before {
+    width: 12.5%;
+  }
+  .btn-post::before {
+    width: 11%;
+  }
+
+  /* None */
+  nav { display: none; }
+  .above { display: none; }
+  .header { border: none; }
+  .header-hr { display: none; }
+}
